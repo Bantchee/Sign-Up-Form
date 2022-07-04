@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--text-color);
+    background-color: var(--text-colorS);
 }
 
 main {
