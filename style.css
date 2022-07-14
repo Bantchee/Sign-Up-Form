@@ -1,7 +1,8 @@
 :root {
-    --text-color: #F3E9D2;
-    --button-color: #F3D34A;
-    font-size: 16px;
+    --main-color-1: white;
+    --main-color-2: black;
+    --accent-color: #EEA243;
+    font-size: 20px;
 }
 
 p {
@@ -20,36 +21,60 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--text-colorS);
+    background-color: black;
 }
 
 main {
-    height: 100vh;
-    width: 70vw;
+    height: 100%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-aside,
-section {
-    flex: 1;
-    height: 100vh;
-    width: 50vh;
-}
-
 aside {
-   
+    display: flex;
+    flex-direction: column;
+    flex: initial;
+    position: relative;
+    height: 100%;
+    width: auto; 
 }
 
 aside > img {
     height: 100%;
+
+    width: auto;
+}
+
+aside > [class="logo"] {
+    height: 100px;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    top: 15%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside > [class="logo"] > img {
+    height: 100%;
+    width: auto;
+}
+
+aside > [class="logo"] > p {
+    color: var(--main-color-1);
+    display: inline;
+    width: auto;
 }
 
 section {
-    background-color: black;
-    color: var(--text-color);
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color-2);
+    color: var(--main-color-1);
     padding-left: 32px;
 }
 
@@ -65,12 +90,40 @@ form div.input-fields > div {
     column-gap: 16px;
 }
 
-label {
+form div.input-fields label {
     display: block;
+    font-size: 16px;
+}
+
+form div.input-fields input {
+    margin-bottom: 16px;
+    border-radius: 5px;
 }
 
 button[class="create-account"] {
+    border: 1px solid var(--main-color-1);
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: var(--main-color-1);
+    padding: 10px 36px;
+    margin: 20px 0px;
+}
 
-    border: 1px solid #EEA243;
-    background-color: #F3D34A;
+button[class="create-account"]:hover {
+    border: 1px solid var(--accent-color);
+    background-color: var(--main-color-2);
+    color: var(--accent-color);
+}
+
+main > section > p {
+    display: inline-block;
+    width: auto;
+}
+
+main > section > p + a {
+    color: var(--accent-color);
+}
+
+main > section > p + a:hover {
+    color: var(--main-color-1);
 }
