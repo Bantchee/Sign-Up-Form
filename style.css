@@ -99,7 +99,24 @@ form div.input-fields label {
 form div.input-fields input {
     margin-bottom: 16px;
     border-radius: 5px;
-    background-color: black;
+    border: 1px solid var(--main-color-1);
+    color: var(--main-color-1);
+}
+
+form div.input-fields input:required {
+    background-color: var(--main-color-2);
+}
+
+form div.input-fields input:optional {
+    background-color: rgb(17, 17, 17);
+}
+
+form div.input-fields input:invalid {
+    border: 2px solid red;
+}
+
+form div.input-fields input:valid {
+    border: 2px solid green;
 }
 
 button[class="create-account"] {
